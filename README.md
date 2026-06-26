@@ -36,3 +36,5 @@ Para procesar el enorme volumen de datos de los Egresos Hospitalarios del INEC (
 5. **Visualización (Python):** Con los datos unificados, utilizamos `pandas` y `matplotlib` para generar un **Combo Chart de Eje Dual** que contrasta el volumen de casos apilados por sector contra la línea de tendencia de mortalidad.
 ---
 *Desarrollado para la comunidad de El Quantificador* 
+
+Repositorio de Github: https://github.com/Parand1/Heart_stroke_analisis_ECUADOR

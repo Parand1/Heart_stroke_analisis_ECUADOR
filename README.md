@@ -13,7 +13,7 @@ Un análisis de los Egresos Hospitalarios en Ecuador para entender la evolución
 
 Soy **Pablo Japón**, Médico con una Maestría en Gerencia Hospitalaria y apasionado por la Ciencia de Datos. 
 
-La inspiración para este proyecto nace de la necesidad de **unir la práctica clínica con la inteligencia de datos**. En mi experiencia, he notado que las decisiones en salud pública y privada a menudo carecen de visibilidad sobre tendencias macro, por lo tanto a mayoría de las veces los encargados de tomar decisiones en salud no lo hacen objetivamente. Quise aplicar mis conocimientos aprovenchando el conurso de El Quiantificador para responder a una pregunta crítica: *¿Cómo ha evolucionado la atención del Infarto Agudo de Miocardio en nuestro sistema de salud en el último lustro?*, y por úlitmo, pero no menos importante, mostrar mis habilidades y la importancia de la ciencia de datos en el sector de la salud.
+La inspiración para este proyecto nace de la necesidad de **unir la práctica clínica con la inteligencia de datos**. En mi experiencia, he notado que las decisiones en salud pública y privada a menudo carecen de visibilidad sobre tendencias macro, por lo tanto a mayoría de las veces los encargados de tomar decisiones en salud no lo hacen objetivamente. Quise aplicar mis conocimientos aprovenchando el conurso de El Quantificador para responder a una pregunta crítica: *¿Cómo ha evolucionado la atención del Infarto Agudo de Miocardio en nuestro sistema de salud en el último lustro?*, y por úlitmo, pero no menos importante, mostrar mis habilidades y la importancia de la ciencia de datos en el sector de la salud.
 ## Hallazgos del Análisis
 
 A través de la exploración de más de 5 años de datos del INEC, descubrimos lo siguiente:
@@ -29,7 +29,7 @@ A través de la exploración de más de 5 años de datos del INEC, descubrimos l
 
 Para procesar el enorme volumen de datos de los Egresos Hospitalarios del INEC (Ecuador), diseñamos el siguiente pipeline:
 
-1. **Ingesta de Datos:** Las bases de datos en bruto (.csv) fueron descargadas directamente desde la página ofical del INEC - Ecuador y se subieron a **Google BigQuery** para su procesamiento masivo.
+1. **Ingesta de Datos:** Las bases de datos en bruto (.csv) fueron descargadas directamente desde la página ofical del INEC - Ecuador y se subieron a **Google BigQuery** para su procesamiento.
 2. **Normalización (SQL):** Se creó el script `scripts/normalization.sql` para limpiar inconsistencias, estandarizar la edad a días, unificar la clasificación de sectores (Público/Privado), decodificar variables y extraer el código CIE-10 puro.
 3. **Análisis Anual Individual (SQL):** En el archivo `scripts/analisis_individual.sql` se desarrollaron las consultas separadas para cada año. Esto permitió explorar inicialmente las bases de datos de forma independiente y calcular métricas base.
 4. **Consolidación de Datos (SQL):** A través del script `scripts/consulta_unificada.sql`, tomamos la lógica del análisis individual y la consolidamos mediante para obtener un solo Dataset maestro continuo (`datos_unificados.csv`), agregando la columna del año.
